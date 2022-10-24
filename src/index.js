@@ -7,6 +7,7 @@ import route from './routes/index.js';
 // const route = require('./routes')
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+console.log('test');
 
 const app = express();
 const port = 3000;
