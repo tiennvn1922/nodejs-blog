@@ -23,7 +23,7 @@ app.use(
 );
 app.use(express.json());
 
-// app.use(morgan('combined'))
+app.use(morgan('combined'));
 
 app.engine(
     '.hbs',
