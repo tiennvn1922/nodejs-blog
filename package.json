@@ -25,13 +25,14 @@
     "express-handlebars": "^6.0.6",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "mongoose": "^6.6.7",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1"
   },
   "type": "module",
   "devDependencies": {
-    "node-sass": "^7.0.3",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "node-sass": "^7.0.3"
   }
 }

@@ -4,7 +4,10 @@ import morgan from 'morgan';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 import route from './routes/index.js';
+import db from './config/db/index.js';
 // const route = require('./routes')
+
+db.connect();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 console.log('test');
@@ -29,12 +32,12 @@ app.engine(
     }),
 );
 app.set('view engine', '.hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 // console.log(path.resolve(__dirname, './views'));
 
 // Routes
 route(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`App listening on port ${port}`);
 });

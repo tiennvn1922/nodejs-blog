@@ -1,7 +1,17 @@
+import Course from '../models/Courses.js';
+
 class SiteController {
     // [GET] /
     index(req, res) {
-        res.render('home');
+        Course.find({}, function (err, courses) {
+            if (!err) {
+                res.json(courses);
+            } else {
+                res.status(400).json({ error: 'error!' });
+            }
+        });
+
+        // res.render("home");
     }
 
     // [GET] /search

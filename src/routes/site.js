@@ -4,8 +4,8 @@ const router = express.Router();
 // const newsController = require('../app/controllers/NewsController.js')
 import siteController from '../app/controllers/SiteController.js';
 
-router.use('/search', siteController.search);
+router.get('/search', siteController.search);
 // cai / phai nam cuoi cung
-router.use('/', siteController.index);
+router.get('/', siteController.index);
 
 export default router;
