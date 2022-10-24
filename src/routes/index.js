@@ -1,6 +1,6 @@
 // const newsRouter = require('./news')
-import newsRouter from './news.js'
-import siteRouter from './site.js'
+import newsRouter from './news.js';
+import siteRouter from './site.js';
 
 export default function route(app) {
     // app.get('/', (req, res) => {
@@ -10,7 +10,7 @@ export default function route(app) {
     // app.get('/news', (req, res) => {
     //     res.render('news')
     // })
-    app.use('/news', newsRouter)
+    app.use('/news', newsRouter);
 
     // app.get('/search', (req, res) => {
     //     // console.log(req.query);
@@ -22,6 +22,5 @@ export default function route(app) {
     //     res.send('searching...')
     // })
     // app.use('/search', siteRouter)
-    app.use('/', siteRouter)
+    app.use('/', siteRouter);
 }
-
